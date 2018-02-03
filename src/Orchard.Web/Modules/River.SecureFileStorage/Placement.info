@@ -1,0 +1,9 @@
+﻿<Placement>
+  <Place Parts_SecureFileStorageSettings_Edit="Content:10"/>
+  <Place Parts_SecureFileStorage_Edit="Content:1"/>
+
+  <Match DisplayType="SummaryAdmin">
+    <Place Parts_SecureFileStorage_SummaryAdmin="Header:after"/>
+  </Match>
+  
+</Placement>

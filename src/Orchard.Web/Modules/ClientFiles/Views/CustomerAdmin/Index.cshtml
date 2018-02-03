@@ -1,0 +1,52 @@
+﻿@model ClientFiles.ViewModels.CustomersIndexVM
+@{
+    Script.Require("ShapesBase");
+    Layout.Title = T("Customers").ToString();
+}
+
+@using(Html.BeginForm("Index", "CustomerAdmin", FormMethod.Get)) {
+    <fieldset class="bulk-actions">
+        <label for="search">@T("Search:")</label>
+        @Html.TextBoxFor(m => m.Search.Expression)
+        <button type="submit">@T("Search")</button>
+        <a href="@Url.Action("Index")">@T("Clear")</a>
+    </fieldset>
+}
+<fieldset>
+    <table class="items" summary="@T("This is a table of the customers in your application")">
+        <colgroup>
+            <col id="Col1" />
+            <col id="Col2" />
+            <col id="Col3" />
+            <col id="Col4" />
+            <col id="Col5" />
+            <col id="Col6" />
+        </colgroup>
+        <thead>
+            <tr>
+                <th scope="col">&nbsp;&darr;</th>
+                <th scope="col">@T("FirstName")</th>
+                <th scope="col">@T("LastName")</th>
+                <th scope="col">@T("Email")</th>
+                <th scope="col">@T("Created")</th>
+                <th scope="col">@T("Actions")</th>
+            </tr>
+        </thead>
+        @foreach (var customer in Model.Customers) {
+        <tr>
+            <td>@customer.Id</td>
+            <td>@customer.FirstName</td>
+            <td>@customer.LastName</td>
+            <td>@customer.Email</td>
+            <td>@customer.CreatedAt</td>
+            <td>
+                <div>
+                    <a href="@Url.Action("Edit", new {customer.Id})" title="@T("Edit")">@T("Edit")</a>@T(" | ")
+                    <a href="@Url.Action("Delete", new {customer.Id, returnUrl = Request.Url.PathAndQuery})">@T("Delete")</a>
+                </div>
+            </td>
+        </tr>
+        } 
+    </table>
+    @Display(Model.Pager)
+</fieldset>

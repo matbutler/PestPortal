@@ -1,0 +1,11 @@
+﻿@model River.SecureFileStorage.Models.SecureFileStorageSettingsPart
+@using River.SecureFileStorage.Models;
+
+<fieldset>
+    <legend>@T( "File Storage" )</legend>
+    <div>
+        <label for="@Html.FieldIdFor( m => m.RootStorageDir )">@T( "The root folder for storing the files" )</label>
+        @Html.EditorFor( m => m.RootStorageDir )
+        @Html.ValidationMessage( "RootStorageDir", "*" )
+    </div>
+</fieldset>

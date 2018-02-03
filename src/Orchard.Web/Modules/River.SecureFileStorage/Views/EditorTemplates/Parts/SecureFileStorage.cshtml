@@ -1,0 +1,31 @@
+﻿@model River.SecureFileStorage.Models.SecureFileStoragePart
+@using River.SecureFileStorage.Models;
+
+<style>
+    .link {
+        background: #FDF5BC;
+        padding: 5px 8px;
+    }
+</style>
+
+@if (Model.Id > 0)
+{
+    <p class="link">The link to this file is @String.Format(@"/securefile/{0}", Model.Id) </p>
+
+}
+
+<fieldset>
+    <legend>@T( "File Storage" )</legend>
+    <div>
+        <label for="@Html.FieldIdFor( m => m.FileName )">@T( "The file to store." )</label>
+
+        @if ( !String.IsNullOrWhiteSpace( Model.FileName ) )
+        {
+            <span>Currently selected file is @Model.FileName</span>
+            <br />
+        }
+        
+        <input type="file" id="@Html.FieldIdFor( m => m.FileName )" name="@Html.FieldIdFor( m => m.FileName )" />
+        @Html.ValidationMessage( "FileName", "*" )
+    </div>
+</fieldset>

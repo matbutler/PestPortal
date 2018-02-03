@@ -1,0 +1,26 @@
+﻿@model ClientFiles.Models.CustomerPart
+@{
+    var user = Model.User;
+}
+<fieldset>
+    <div class="editor-label">@Html.LabelFor(x => x.Title)</div>
+    <div class="editor-field">@Html.TextBoxFor(x => x.Title, new { @class = "text" })</div>
+
+    <div class="editor-label">@Html.LabelFor(x => x.FirstName)</div>
+    <div class="editor-field">
+        @Html.TextBoxFor(x => x.FirstName, new { @class = "large text" })
+        @Html.ValidationMessageFor(x => x.FirstName)
+    </div>
+    
+    <div class="editor-label">@Html.LabelFor(x => x.LastName)</div>
+    <div class="editor-field">
+        @Html.TextBoxFor(x => x.LastName, new { @class = "large text" })
+        @Html.ValidationMessageFor(x => x.LastName)
+    </div>
+    
+    <div class="editor-label">@Html.LabelFor(x => user.Email)</div>
+    <div class="editor-field">
+        @Html.TextBoxFor(x => user.Email, new { @class = "large text" })
+        @Html.ValidationMessageFor(x => user.Email)
+    </div>
+</fieldset>

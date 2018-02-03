@@ -1,0 +1,341 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1EAD61AA-F0ED-498A-96CF-4B651F08F3A5}</ProjectGuid>
+    <ProjectTypeGuids>{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FileManager</RootNamespace>
+    <AssemblyName>FileManager</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Coding|AnyCPU'">
+    <OutputPath>bin\Coding\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.ComponentModel.DataAnnotations">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\lib\aspnetmvc\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\canvas-to-blob.min.js" />
+    <Content Include="Scripts\corsPP\jquery.postmessage-transport.js" />
+    <Content Include="Scripts\corsPP\jquery.xdr-transport.js" />
+    <Content Include="Scripts\fileHelpers.js" />
+    <Content Include="Scripts\flowplayer.controls.swf" />
+    <Content Include="Scripts\flowplayer.js" />
+    <Content Include="Scripts\flowplayer.swf" />
+    <Content Include="Scripts\jquery.fileupload-ip.js" />
+    <Content Include="Scripts\jquery.fileupload-ui.js" />
+    <Content Include="Scripts\jquery.fileupload.js" />
+    <Content Include="Scripts\jquery.iframe-transport.js" />
+    <Content Include="Scripts\jquery.lightbox.js" />
+    <Content Include="Scripts\jquery.ui.widget.js" />
+    <Content Include="Scripts\load-image.min.js" />
+    <Content Include="Scripts\locale.js" />
+    <Content Include="Scripts\main.js" />
+    <Content Include="Scripts\MediaBrowser.js" />
+    <Content Include="Scripts\MediaPicker.js" />
+    <Content Include="Scripts\silverlight.js" />
+    <Content Include="Scripts\tmpl.min.js" />
+    <Content Include="Scripts\vendor\jquery.ui.widget.js" />
+    <Content Include="Scripts\Web.config" />
+    <Content Include="Scripts\wmvplayer.js" />
+    <Content Include="Styles\bootstrap.min.css" />
+    <Content Include="Styles\FileDisplay.css" />
+    <Content Include="Styles\FileDownload.css" />
+    <Content Include="Styles\fileuploaButtons.css" />
+    <Content Include="Styles\Images\accessdenied.gif" />
+    <Content Include="Styles\Images\cross.png" />
+    <Content Include="Styles\Images\cut.png" />
+    <Content Include="Styles\Images\download-button.png" />
+    <Content Include="Styles\Images\filter-bg.png" />
+    <Content Include="Styles\Images\folder-32.png" />
+    <Content Include="Styles\Images\folder-open-32.png" />
+    <Content Include="Styles\Images\glyphicons-halflings-white.png" />
+    <Content Include="Styles\Images\icons\ac3.png" />
+    <Content Include="Styles\Images\icons\ace.png" />
+    <Content Include="Styles\Images\icons\ade.png" />
+    <Content Include="Styles\Images\icons\adp.png" />
+    <Content Include="Styles\Images\icons\ai.png" />
+    <Content Include="Styles\Images\icons\aiff.png" />
+    <Content Include="Styles\Images\icons\ani.png" />
+    <Content Include="Styles\Images\icons\asf.png" />
+    <Content Include="Styles\Images\icons\au.png" />
+    <Content Include="Styles\Images\icons\avi.png" />
+    <Content Include="Styles\Images\icons\bat.png" />
+    <Content Include="Styles\Images\icons\bin.png" />
+    <Content Include="Styles\Images\icons\bmp.png" />
+    <Content Include="Styles\Images\icons\bsp.png" />
+    <Content Include="Styles\Images\icons\bup.png" />
+    <Content Include="Styles\Images\icons\cab.png" />
+    <Content Include="Styles\Images\icons\cal.png" />
+    <Content Include="Styles\Images\icons\cat.png" />
+    <Content Include="Styles\Images\icons\css.png" />
+    <Content Include="Styles\Images\icons\cue.png" />
+    <Content Include="Styles\Images\icons\cur.png" />
+    <Content Include="Styles\Images\icons\daa.png" />
+    <Content Include="Styles\Images\icons\dat.png" />
+    <Content Include="Styles\Images\icons\dcr.png" />
+    <Content Include="Styles\Images\icons\der.png" />
+    <Content Include="Styles\Images\icons\dic.png" />
+    <Content Include="Styles\Images\icons\divx.png" />
+    <Content Include="Styles\Images\icons\diz.png" />
+    <Content Include="Styles\Images\icons\dll.png" />
+    <Content Include="Styles\Images\icons\doc.png" />
+    <Content Include="Styles\Images\icons\docx.png" />
+    <Content Include="Styles\Images\icons\dvd.png" />
+    <Content Include="Styles\Images\icons\dwg.png" />
+    <Content Include="Styles\Images\icons\dwt.png" />
+    <Content Include="Styles\Images\icons\fon.png" />
+    <Content Include="Styles\Images\icons\gam.png" />
+    <Content Include="Styles\Images\icons\gif.png" />
+    <Content Include="Styles\Images\icons\hlp.png" />
+    <Content Include="Styles\Images\icons\hst.png" />
+    <Content Include="Styles\Images\icons\html.png" />
+    <Content Include="Styles\Images\icons\ico.png" />
+    <Content Include="Styles\Images\icons\ifo.png" />
+    <Content Include="Styles\Images\icons\inf.png" />
+    <Content Include="Styles\Images\icons\ini.png" />
+    <Content Include="Styles\Images\icons\iso.png" />
+    <Content Include="Styles\Images\icons\java.png" />
+    <Content Include="Styles\Images\icons\jif.png" />
+    <Content Include="Styles\Images\icons\jpg.png" />
+    <Content Include="Styles\Images\icons\log.png" />
+    <Content Include="Styles\Images\icons\m4a.png" />
+    <Content Include="Styles\Images\icons\mdl.png" />
+    <Content Include="Styles\Images\icons\mid.png" />
+    <Content Include="Styles\Images\icons\mmf.png" />
+    <Content Include="Styles\Images\icons\mmm.png" />
+    <Content Include="Styles\Images\icons\mov.png" />
+    <Content Include="Styles\Images\icons\mp2.png" />
+    <Content Include="Styles\Images\icons\mp2v.png" />
+    <Content Include="Styles\Images\icons\mp3.png" />
+    <Content Include="Styles\Images\icons\mp4.png" />
+    <Content Include="Styles\Images\icons\mpeg.png" />
+    <Content Include="Styles\Images\icons\msp.png" />
+    <Content Include="Styles\Images\icons\nfo.png" />
+    <Content Include="Styles\Images\icons\pdf.png" />
+    <Content Include="Styles\Images\icons\php.png" />
+    <Content Include="Styles\Images\icons\png.png" />
+    <Content Include="Styles\Images\icons\ppt.png" />
+    <Content Include="Styles\Images\icons\pptx.png" />
+    <Content Include="Styles\Images\icons\psd.png" />
+    <Content Include="Styles\Images\icons\ra.png" />
+    <Content Include="Styles\Images\icons\rar.png" />
+    <Content Include="Styles\Images\icons\reg.png" />
+    <Content Include="Styles\Images\icons\rtf.png" />
+    <Content Include="Styles\Images\icons\spr.png" />
+    <Content Include="Styles\Images\icons\theme.png" />
+    <Content Include="Styles\Images\icons\tiff.png" />
+    <Content Include="Styles\Images\icons\tlb.png" />
+    <Content Include="Styles\Images\icons\torrent.png" />
+    <Content Include="Styles\Images\icons\ttf.png" />
+    <Content Include="Styles\Images\icons\txt.png" />
+    <Content Include="Styles\Images\icons\unknown.png" />
+    <Content Include="Styles\Images\icons\url.png" />
+    <Content Include="Styles\Images\icons\vob.png" />
+    <Content Include="Styles\Images\icons\vtf.png" />
+    <Content Include="Styles\Images\icons\wad.png" />
+    <Content Include="Styles\Images\icons\wav.png" />
+    <Content Include="Styles\Images\icons\wma.png" />
+    <Content Include="Styles\Images\icons\wmv.png" />
+    <Content Include="Styles\Images\icons\wpl.png" />
+    <Content Include="Styles\Images\icons\wri.png" />
+    <Content Include="Styles\Images\icons\xls.png" />
+    <Content Include="Styles\Images\icons\xlsx.png" />
+    <Content Include="Styles\Images\icons\xml.png" />
+    <Content Include="Styles\Images\icons\xps.png" />
+    <Content Include="Styles\Images\icons\xsl.png" />
+    <Content Include="Styles\Images\icons\zip.png" />
+    <Content Include="Styles\Images\imagepreview.png" />
+    <Content Include="Styles\Images\lightbox-blank.gif" />
+    <Content Include="Styles\Images\lightbox-btn-close.gif" />
+    <Content Include="Styles\Images\lightbox-btn-next.gif" />
+    <Content Include="Styles\Images\lightbox-btn-prev.gif" />
+    <Content Include="Styles\Images\lightbox-ico-loading.gif" />
+    <Content Include="Styles\Images\magnifier.gif" />
+    <Content Include="Styles\Images\menu.files.png" />
+    <Content Include="Styles\Images\sort-asc.png" />
+    <Content Include="Styles\Images\sort-desc.png" />
+    <Content Include="Styles\Images\synchronizing.gif" />
+    <Content Include="Styles\Images\unknownpreview.png" />
+    <Content Include="Styles\Images\videopreview.png" />
+    <Content Include="Styles\jquery.lightbox.css" />
+    <Content Include="Styles\mediapicker.css" />
+    <Content Include="Styles\menu.files-admin.css" />
+    <Content Include="Styles\orchard-media-admin.css" />
+    <Content Include="Styles\editSite.css" />
+    <Content Include="Styles\Web.config" />
+    <Content Include="Views\Web.config" />
+    <Content Include="Web.config" />
+    <Content Include="Properties\AssemblyInfo.cs" />
+    <Content Include="Module.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Orchard\Orchard.Framework.csproj">
+      <Project>{2D1D92BB-4555-4CBE-8D0E-63563D6CE4C6}</Project>
+      <Name>Orchard.Framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\Tools\Orchard\Orchard.csproj">
+      <Project>{33B1BC8D-E292-4972-A363-22056B207156}</Project>
+      <Name>Orchard</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Core\Orchard.Core.csproj">
+      <Project>{9916839C-39FC-4CEB-A5AF-89CA7E87119F}</Project>
+      <Name>Orchard.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Orchard.jQuery\Orchard.jQuery.csproj">
+      <Project>{8F116B06-1C0E-4E4C-9A0A-D2FAB851E768}</Project>
+      <Name>Orchard.jQuery</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Orchard.Media\Orchard.Media.csproj">
+      <Project>{D9A7B330-CD22-4DA1-A95A-8DE1982AD8EB}</Project>
+      <Name>Orchard.Media</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Orchard.Roles\Orchard.Roles.csproj">
+      <Project>{D10AD48F-407D-4DB5-A328-173EC7CB010F}</Project>
+      <Name>Orchard.Roles</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Orchard.Users\Orchard.Users.csproj">
+      <Project>{79AED36E-ABD0-4747-93D3-8722B042454B}</Project>
+      <Name>Orchard.Users</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="DefaultFileManagerUpdater.cs" />
+    <Compile Include="Drivers\FileManagerDriver.cs" />
+    <Compile Include="Handlers\FileManagerHandler.cs" />
+    <Compile Include="Handlers\FileManagerModuleHandler.cs" />
+    <Compile Include="Helpers\FilesGroupsHelpers.cs" />
+    <Compile Include="Migrations.cs" />
+    <Compile Include="Models\FileManagerRecord.cs" />
+    <Compile Include="Models\FileManagerSettingsRecord.cs" />
+    <Compile Include="Models\FileRecord.cs" />
+    <Compile Include="Models\FilesGroupsRecord.cs" />
+    <Compile Include="Models\GroupRecord.cs" />
+    <Compile Include="Models\PermissionRecord.cs" />
+    <Compile Include="Routes.cs" />
+    <Compile Include="Services\FilesGroupsService.cs" />
+    <Compile Include="Services\IFileManagerService.cs" />
+    <Compile Include="Services\IFilesService.cs" />
+    <Compile Include="Services\IGroupsService.cs" />
+    <Compile Include="Services\IPermissionService.cs" />
+    <Compile Include="Services\ISettingsService.cs" />
+    <Compile Include="ViewModels\DisplayModuleViewModel.cs" />
+    <Compile Include="ViewModels\EditModuleViewModel.cs" />
+    <Compile Include="ViewModels\FileEdit.cs" />
+    <Compile Include="ViewModels\FileGroup.cs" />
+    <Compile Include="ViewModels\FileGroupCreate.cs" />
+    <Compile Include="ViewModels\FileGroupEdit.cs" />
+    <Compile Include="ViewModels\FileItemAdd.cs" />
+    <Compile Include="ViewModels\FileView.cs" />
+    <Compile Include="ViewModels\MediaPickerViewModel.cs" />
+    <Compile Include="ViewModels\SettingsViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="placement.info" />
+    <None Include="Views\Admin\Add.cshtml" />
+    <None Include="Views\Admin\Create.cshtml" />
+    <None Include="Views\Admin\EditFile.cshtml" />
+    <None Include="Views\Admin\EditGroup.cshtml" />
+    <None Include="Views\Admin\Index.cshtml" />
+    <None Include="Views\Admin\MediaPicker.cshtml" />
+    <None Include="Views\Admin\Settings.cshtml" />
+    <None Include="Views\Admin\Tab_Gallery.cshtml" />
+    <None Include="Views\Admin\Tab_Url.cshtml" />
+    <None Include="Views\DisplayTemplates\Parts\FileView.cshtml" />
+    <None Include="Views\EditorTemplates\Parts\Files.cshtml" />
+    <None Include="Views\Parts\Files.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Scripts\wmvplayer.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target> -->
+  <Target Name="AfterBuild" DependsOnTargets="AfterBuildCompiler">
+    <PropertyGroup>
+      <AreasManifestDir>$(ProjectDir)\..\Manifests</AreasManifestDir>
+    </PropertyGroup>
+    <!-- If this is an area child project, uncomment the following line:
+    <CreateAreaManifest AreaName="$(AssemblyName)" AreaType="Child" AreaPath="$(ProjectDir)" ManifestPath="$(AreasManifestDir)" ContentFiles="@(Content)" />
+    -->
+    <!-- If this is an area parent project, uncomment the following lines:
+    <CreateAreaManifest AreaName="$(AssemblyName)" AreaType="Parent" AreaPath="$(ProjectDir)" ManifestPath="$(AreasManifestDir)" ContentFiles="@(Content)" />
+    <CopyAreaManifests ManifestPath="$(AreasManifestDir)" CrossCopy="false" RenameViews="true" />
+    -->
+  </Target>
+  <Target Name="AfterBuildCompiler" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(ProjectDir)\..\$(ProjectName)" />
+  </Target>
+  <ProjectExtensions />
+</Project>
